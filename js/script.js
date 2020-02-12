@@ -1,10 +1,8 @@
 {
-  /*function playGame(playerInput){
-    clearMessage()*/
-    const playGame = function(playerInput) {
+
+    const playGame = function(playerInput){
       clearMessages();
     
-  
   
       const getMoveName = function(randomNumber){
         if(randomNumber == 1){
@@ -22,33 +20,28 @@
       const argComputerMove = getMoveName(randomNumber);
       printMessage('Komputer wybral: ' + argComputerMove);
   
-  
-      /*let playerInput = prompt('Wybierz swój ruch! 1: kamien, 2: papier, 3: nozyce.');*/
-    
-  
       const argPlayerMove = getMoveName(playerInput);
       console.log('Gracz wpisal: ' + playerInput);
       printMessage('Twój ruch to: ' + argPlayerMove);
   
   
-      /*console.log('moves:', argComputerMove, argPlayerMove);*/
-      const displayResult = function(argComputerMove, argPlayerMove) {
-        if (argComputerMove == "kamien" && argPlayerMove == "papier") {
+      const displayResult = function(argComputerMove, argPlayerMove){
+        if (argComputerMove == "kamien" && argPlayerMove == "papier"){
           printMessage("Zwyciestwo : )!");
         } else if (argComputerMove == "kamien" && argPlayerMove == "nozyce") {
-          printMessage("Komputer wygral : (");
+          printMessage("Komputer wygrał : (");
         } else if (argComputerMove == "papier" && argPlayerMove == "kamien") {
-          printMessage("Komputer wygral : (");
+          printMessage("Komputer wygrał : (");
         } else if (argComputerMove == "papier" && argPlayerMove == "nozyce") {
-          printMessage("Zwyciestwo  : )!");
+          printMessage("Zwycięstwo  : )!");
         } else if (argComputerMove == "nozyce" && argPlayerMove == "papier") {
-          printMessage("Komputer wygral = (");
+          printMessage("Komputer wygrał = (");
         } else if (argComputerMove == "nozyce" && argPlayerMove == "kamien") {
-          printMessage("Zwyciestwo  : )!");
-        } else if (argComputerMove == argPlayerMove) {
+          printMessage("Zwycięstwo  : )!");
+        } else if (argComputerMove == argPlayerMove){
           printMessage("Remis = |");
         } else { 
-          printMessage( 'Wrong move ! Available options: 1-2-3')
+          printMessage('Wrong move ! Available options: 1-2-3')
         } 
       }
       displayResult(argComputerMove, argPlayerMove);
@@ -65,6 +58,7 @@
   document.getElementById('play-scissors').addEventListener('click', function(){
     playGame(3);
   });
+
   
-  }
+}
   
